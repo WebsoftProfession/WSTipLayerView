@@ -15,6 +15,8 @@
 		AC6D6ABF20720EF50009763B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AC6D6ABE20720EF50009763B /* main.m */; };
 		AC6D6AC920720EF50009763B /* WSTipLayerViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AC6D6AC820720EF50009763B /* WSTipLayerViewTests.m */; };
 		AC6D6AD420720EF60009763B /* WSTipLayerViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = AC6D6AD320720EF60009763B /* WSTipLayerViewUITests.m */; };
+		AC6D6AE420720F250009763B /* WSTipLayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = AC6D6AE220720F250009763B /* WSTipLayerView.m */; };
+		AC6D6AE620720F6B0009763B /* avtar_480.png in Resources */ = {isa = PBXBuildFile; fileRef = AC6D6AE520720F6B0009763B /* avtar_480.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,9 @@
 		AC6D6ACF20720EF50009763B /* WSTipLayerViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WSTipLayerViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC6D6AD320720EF60009763B /* WSTipLayerViewUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WSTipLayerViewUITests.m; sourceTree = "<group>"; };
 		AC6D6AD520720EF60009763B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC6D6AE220720F250009763B /* WSTipLayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSTipLayerView.m; sourceTree = "<group>"; };
+		AC6D6AE320720F250009763B /* WSTipLayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSTipLayerView.h; sourceTree = "<group>"; };
+		AC6D6AE520720F6B0009763B /* avtar_480.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = avtar_480.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,10 +106,12 @@
 		AC6D6AAE20720EF50009763B /* WSTipLayerView */ = {
 			isa = PBXGroup;
 			children = (
+				AC6D6AE120720F1A0009763B /* WSTipView */,
 				AC6D6AAF20720EF50009763B /* AppDelegate.h */,
 				AC6D6AB020720EF50009763B /* AppDelegate.m */,
 				AC6D6AB220720EF50009763B /* ViewController.h */,
 				AC6D6AB320720EF50009763B /* ViewController.m */,
+				AC6D6AE520720F6B0009763B /* avtar_480.png */,
 				AC6D6AB520720EF50009763B /* Main.storyboard */,
 				AC6D6AB820720EF50009763B /* Assets.xcassets */,
 				AC6D6ABA20720EF50009763B /* LaunchScreen.storyboard */,
@@ -130,6 +137,15 @@
 				AC6D6AD520720EF60009763B /* Info.plist */,
 			);
 			path = WSTipLayerViewUITests;
+			sourceTree = "<group>";
+		};
+		AC6D6AE120720F1A0009763B /* WSTipView */ = {
+			isa = PBXGroup;
+			children = (
+				AC6D6AE320720F250009763B /* WSTipLayerView.h */,
+				AC6D6AE220720F250009763B /* WSTipLayerView.m */,
+			);
+			path = WSTipView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,7 +215,7 @@
 				TargetAttributes = {
 					AC6D6AAB20720EF50009763B = {
 						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					AC6D6AC320720EF50009763B = {
 						CreatedOnToolsVersion = 9.2;
@@ -239,6 +255,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC6D6ABC20720EF50009763B /* LaunchScreen.storyboard in Resources */,
+				AC6D6AE620720F6B0009763B /* avtar_480.png in Resources */,
 				AC6D6AB920720EF50009763B /* Assets.xcassets in Resources */,
 				AC6D6AB720720EF50009763B /* Main.storyboard in Resources */,
 			);
@@ -268,6 +285,7 @@
 				AC6D6AB420720EF50009763B /* ViewController.m in Sources */,
 				AC6D6ABF20720EF50009763B /* main.m in Sources */,
 				AC6D6AB120720EF50009763B /* AppDelegate.m in Sources */,
+				AC6D6AE420720F250009763B /* WSTipLayerView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,11 +448,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = WSTipLayerView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ws.WSTipLayerView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -443,11 +463,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = WSTipLayerView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ws.WSTipLayerView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
